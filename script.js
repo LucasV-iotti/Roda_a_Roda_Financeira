@@ -17,18 +17,19 @@ const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
 const SPIN_COST = 20; const VOWEL_COST = 500; const FALENCIA_PENALTY = 2000;
 const WRONG_LETTER_PENALTY = 200; // por letra errada no chute
 const PUZZLES = [
-  { categoria: 'Financeira	Dica: Dívidas em outras galáxias bancárias. Risco em órbita!', frase: 'ATRASO OUTROS BANCOS' },
-  { categoria: 'Financeira	Dica: Sem fonte de renda. Vive de saques e auxílios.', frase: 'DESEMPREGADO' },
-  { categoria: 'Financeira	Dica: Alta renda, mas estilo de vida fora da rota financeira.', frase: 'SUPER ENDIVIDADO' },
-  { categoria: 'Financeira	Dica: Garantia menor que a dívida. Nave depreciada!', frase: 'BEM DEPRECIADO' },
-  { categoria: 'Financeira	Dica: Renda flutuante. Profissional liberal em missão solo.', frase: 'AUTONOMO' },
-  { categoria: 'Financeira	Dica: Investimentos maiores que a parcela. Cliente estrela do banco.', frase: 'INVESTIDOR SANTANDER' },
-  { categoria: 'Financeira	Dica: Mais de um veículo. Patrimônio em expansão.', frase: 'MAIS DE UM VEICULO' },
-  { categoria: 'Financeira	Dica: Situação financeira crítica. Precisa suporte da base.', frase: 'DIFICULDADES FINANCEIRAS' },
-  { categoria: 'Financeira	Dica: Atrasos frequentes. Precisa mudar o curso da navegação.', frase: 'ATRASO RECORRENTE' },
+  { categoria: 'Financeira	 Dica: Dívidas em outras galáxias bancárias. Risco em órbita!', frase: 'ATRASO OUTROS BANCOS' },
+  { categoria: 'Financeira	 Dica: Sem fonte de renda estável. Sobrevive com saques e auxílios governamentais.', frase: 'DESEMPREGADO' },
+  { categoria: 'Financeira	 Dica: Possui alta renda, mas os gastos excessivos comprometem a saúde financeira.', frase: 'SUPER ENDIVIDADO' },
+  { categoria: 'Financeira	 Dica: O valor do bem dado como garantia é inferior à dívida.', frase: 'BEM DEPRECIADO' },
+  { categoria: 'Financeira	 Dica: Renda variável. Atua como profissional liberal, sem vínculo empregatício.', frase: 'AUTONOMO' },
+  { categoria: 'Financeira	 Dica: Os investimentos superam o valor da parcela. Perfil valorizado pela instituição.', frase: 'INVESTIDOR SANTANDER' },
+  { categoria: 'Financeira	 Dica: Possui mais de um veículo, indicando crescimento patrimonial.', frase: 'MAIS DE UM VEICULO' },
+  { categoria: 'Financeira	 Dica: Enfrenta dificuldades financeiras significativas e precisa de apoio para reorganização.', frase: 'DIFICULDADES FINANCEIRAS' },
+  { categoria: 'Financeira	 Dica: Atrasos recorrentes nas parcelas. É necessário rever hábitos e estratégias financeiras.', frase: 'ATRASO RECORRENTE' },
+  { categoria: 'Financeira	 Dica: O planejamento financeiro não foi eficaz desde o início.', frase: 'PRIMEIRA PARCELA EM ATRASO' },
 
 ];
-const state = { playerName:'Jogador', round:1, totalRounds:9, bank:500, roundScore:0, current:null, revealed:[], usedLetters:new Set(), canSpin:true, guessBaseValue:null };
+const state = { playerName:'Jogador', round:1, totalRounds:10, bank:500, roundScore:0, current:null, revealed:[], usedLetters:new Set(), canSpin:true, guessBaseValue:null };
 const WHEEL_SEGMENTS = [
   { label: '300', value: 300 },{ label: '400', value: 400 },{ label: '500', value: 500 },{ label: 'Falência', effect: 'BANKRUPT' },
   { label: '600', value: 600 },{ label: '700', value: 700 },{ label: '800', value: 800 },{ label: 'Falência', effect: 'BANKRUPT' },
