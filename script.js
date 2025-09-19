@@ -1,4 +1,4 @@
-========================================================== */
+/* ==========================================================
  Roda a Roda – Treinamento (PT-BR)
  Regras & melhorias:
  - Som do giro, tics por segmento, ding de parada, bounce no ponteiro.
