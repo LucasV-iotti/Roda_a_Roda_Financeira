@@ -17,7 +17,7 @@ const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
 const SPIN_COST = 20; const VOWEL_COST = 500; const FALENCIA_PENALTY = 2000;
 const WRONG_LETTER_PENALTY = 200; // por letra errada no chute
 const PUZZLES = [
-  { categoria: 'Financeira	 Dica: Dívidas em outras galáxias bancárias. Risco em órbita!', frase: 'ATRASO OUTROS BANCOS' },
+  { categoria: 'Financeira	 Dica: Dívidas em outras galáxias bancárias. Risco em órbita!', frase: 'ATRASO EM OUTROS BANCOS' },
   { categoria: 'Financeira	 Dica: Sem fonte de renda estável. Sobrevive com saques e auxílios governamentais.', frase: 'DESEMPREGADO' },
   { categoria: 'Financeira	 Dica: Possui alta renda, mas os gastos excessivos comprometem a saúde financeira.', frase: 'SUPER ENDIVIDADO' },
   { categoria: 'Financeira	 Dica: O valor do bem dado como garantia é inferior à dívida.', frase: 'BEM DEPRECIADO' },
